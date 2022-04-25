@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" 
+    xmlns:p="http://www.springframework.org/schema/p" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context.xsd"> 
+    <!-- bean definitions here -->
+    
+    <!-- student1 bean declaration -->
+    <bean class="com.example.Spring_core.dependency_injection.setter_injection.primitive_data_type_injection.Student" 
+    	name="student1">
+    	<property name="studentId">
+    		<value>1</value>
+    	</property>
+    	<property name="studentName" value="Anshuman Yuvraj"/>
+    	<property name="studentAddress" value="DELHI" />
+    </bean>
+    
+    <!-- student2 bean declaration using p:schema -->
+    <bean class="com.example.Spring_core.dependency_injection.setter_injection.primitive_data_type_injection.Student" 
+    	name="student2" 
+    	p:studentId="2" 
+    	p:studentName="Another Yuvraj"
+    	p:studentAddress="DELHI" />
+
+</beans>

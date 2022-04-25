@@ -1,0 +1,84 @@
+# Spring:
+	-Spring is a dependency injection framework.
+	-Spring makes sure that it creates the instance of all the objects it manages with their
+	 dependencies properly populated.
+
+# Important Terminologies of Spring framework:-
+	a) Beans: These are the instances that the Spring manages.
+	
+	b) Autowiring: The process by which Spring identifies the dependencies and matches for those 
+	   dependencies in the managed beans, and populates them.
+	
+	c) Dependency Injection: The injection of dependencies in the managed beans/objects.
+	
+	d) Inversion of control: In the typical approach the class which needs the dependencies instantiates it.
+	   But here dependency instances are to be created by the Spring framework.
+	   The control of creating dependencies is removed from the class that needs it, and is given to the Spring
+	   Framework. This is called Inversion of Control.
+	   
+	e) IOC Container: A generic terminology to represent anything that is implementing Inversion of control.
+	   In Spring Framework the typical IOC container is Application Context.
+	 
+	f) Application Context: Application Context is the place where all the beans are created and managed.
+	   It is the most important part of the framework. That's where all the core logic of Spring framework happens.
+	   
+# Spring IOC Container:-
+	-A component/program of Spring framework which maintains the lifecylce of managed beans.
+	-Responsible for object creation, holding them in memory and injecting them into another object as per need.
+	-It requires Beans and Configuration to do it's work.
+		Beans: simple POJO classes
+		Configuration: XML configuration or JAVA configuration.
+
+# In Spring there are two implementations of the IOC Container.
+	a) Application Context
+	b) Bean Factory
+	
+												BeanFactory	(interface)
+													|
+											 ApplicationContext (interface)
+											 		|
+				-------------------------------------------------------------------------------------
+				|											|										|
+	AnnotationConfigApplicationContext			ClasspathXMLApplicationContext			FileSystemXMLApplicationContext
+		(implementation class)						(implementation class)					(implementation class)
+		
+# AnnotationConfigApplicationContext: Scans/Searches for Java based configuration in Java classpath.
+# ClasspathXMLApplicaitonContext: Scans/Searches for XML configuration in Java classpath.
+# FileSystemXMLApplicationContext: Scans/Searches for XML configuration file from File system.
+
+# Ways of injecting dependencies:-
+	Types of Dependency Injection:
+		a) Constructor injection:- Dependencies injected through the constructor of the POJO class.
+		b) Setter injection/Property injection:- Dependencies injected through the setter method of the POJO class.
+		
+	-The way of dependency injection is determined by the configuration file.
+	-The information of beans and their dependencies must be provided to the Spring framework using the configuration 
+	 file (XML or JAVA)
+	-So beans and their dependencies are to be declared in the configuration file.
+
+# Types of Dependencies supported for injection:-
+	IOC container can handle injection following types of dependencies:
+	a) Primitive Data Type: byte, short, int, long , float, double, char, boolean
+	b) Collection Type: List, Set, Map and Properties
+	c) Reference Type: other class objects.
+
+## Spring Core maven application:-
+	Add dependencies of spring-core and spring-context in pom.xml
+	
+	 <!-- Spring Core -->
+	<dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-core</artifactId>
+    	<version>5.3.19</version>
+	</dependency>
+	
+	<!-- Spring Context -->
+	<dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-context</artifactId>
+    	<version>5.3.19</version>
+	</dependency>
+	
+
+
+	

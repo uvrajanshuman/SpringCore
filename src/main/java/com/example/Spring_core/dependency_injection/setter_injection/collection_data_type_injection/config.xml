@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" 
+    xmlns:p="http://www.springframework.org/schema/p" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context.xsd"> 
+    <!-- bean definitions here -->
+    
+    <!-- employee1 bean declaration -->
+    <bean class="com.example.Spring_core.dependency_injection.setter_injection.collection_data_type_injection.Employee" 
+    	name="employee1">
+    	<property name="name" value="Anshuman Yuvraj" />
+    	
+    	<!-- injecting list -->
+    	<property name="phones">
+    		<list>
+    			<value>1234567890</value>
+    			<value>9876543210</value>
+    			<value>null</value>
+    		</list>
+    	</property>
+    	
+    	<!-- injecting set -->
+    	<property name="address">
+    		<set>
+    			<value>Delhi</value>
+    			<value>SMI</value>
+    			<value>ASN</value>
+    			<value>ASN</value>
+    		</set>
+    	</property>
+    	
+    	<!-- injecting map -->
+    	<property name="courses">
+    		<map>
+    			<entry key="Java" value="2 months"/>
+    			<entry key="Python" value="1 month" />
+    		</map>
+    	</property>
+    	
+    	<!-- injecting properties -->
+    	<property name="properties">
+    		<props>
+    			<prop key="name">Yuvraj</prop>
+    			<prop key="eid">123</prop>
+    		</props>
+    	</property>
+    </bean>
+
+</beans>

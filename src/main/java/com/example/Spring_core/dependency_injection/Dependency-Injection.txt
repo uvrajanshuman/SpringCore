@@ -1,0 +1,15 @@
+# Ways of injecting dependencies:-
+	Types of Dependency Injection:
+		a) Constructor injection:- Dependencies injected through the constructor of the POJO class.
+		b) Setter injection/Property injection:- Dependencies injected through the setter method of the POJO class.
+		
+	-The way of dependency injection is determined by the configuration file.
+	-The information of beans and their dependencies must be provided to the Spring framework using the configuration 
+	 file (XML or JAVA)
+	-So beans and their dependencies are to be declared in the configuration file.
+
+# Types of Dependencies supported for injection:-
+	IOC container can handle injection following types of dependencies:
+	a) Primitive Data Type: byte, short, int, long , float, double, char, boolean
+	b) Collection Type: List, Set, Map and Properties
+	c) Reference Type: other class objects.
