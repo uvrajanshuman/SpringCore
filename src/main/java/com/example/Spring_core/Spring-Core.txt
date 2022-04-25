@@ -33,14 +33,14 @@
 	a) Application Context
 	b) Bean Factory
 	
-												BeanFactory	(interface)
-													|
-											 ApplicationContext (interface)
-											 		|
-				-------------------------------------------------------------------------------------
-				|											|										|
-	AnnotationConfigApplicationContext			ClasspathXMLApplicationContext			FileSystemXMLApplicationContext
-		(implementation class)						(implementation class)					(implementation class)
+								   BeanFactory (interface)
+									|
+								ApplicationContext (interface)
+									|
+				-----------------------------------------------------------------------------------------
+				|					|					        |
+	        AnnotationConfigApplicationContext	   ClasspathXMLApplicationContext		FileSystemXMLApplicationContext
+		(implementation class)			   (implementation class)			(implementation class)
 		
 # AnnotationConfigApplicationContext: Scans/Searches for Java based configuration in Java classpath.
 # ClasspathXMLApplicaitonContext: Scans/Searches for XML configuration in Java classpath.
