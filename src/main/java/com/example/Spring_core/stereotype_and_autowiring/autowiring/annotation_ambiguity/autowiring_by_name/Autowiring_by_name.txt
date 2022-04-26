@@ -1,0 +1,11 @@
+# Autowiring by name:-
+	The name of bean can also be used for autowiring to specify the specific bean when multiple 
+	beans are availaible.
+	
+	Ex:-
+		BubbleSort (class name) ---> bubbleSort (bean name)
+		so,
+		
+		@Autowired
+		SortAlgorithm bubbleSort; --> BubbleSort injected
+		

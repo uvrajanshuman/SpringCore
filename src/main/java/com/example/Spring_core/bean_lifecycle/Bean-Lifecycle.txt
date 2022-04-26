@@ -1,0 +1,25 @@
+# Lifecycle of a Bean:-
+	Spring provides two important lifecycle methods to every bean
+	
+	a) public void init() -->for initialization code
+	
+	b) public void destroy() -->for cleanup code
+	
+	The name of these methods can be changed but the signature must remain same.
+	
+## Lifecycle of a Bean/object:-
+	bean created --> bean initialized --> init() --> Ready for use --> destroy() --> bean destroyed
+	
+# The Spring IOC Container creates instances of a bean and makes sure it is destroyed when not needed.
+
+# In between it provides two methods to do something as soon as bean is created; as well as to 
+  do something just before the bean is destroyed.
+  
+# The lifecycle methods of spring can be configured in 3 ways:
+	a) XML configuration
+	b) Interface
+	c) Annotation
+	
+# for destroy() method to work the shutdown hook needs to be registered as:
+		// Registering shutdown hook
+		context.registerShutdownHook();

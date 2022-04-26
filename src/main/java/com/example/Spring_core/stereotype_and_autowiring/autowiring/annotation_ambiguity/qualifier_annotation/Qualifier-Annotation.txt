@@ -1,0 +1,3 @@
+# @Qualifier Annotation:-
+	@Qualifier annotation is used to allocate names to beans while defining bean.
+	And used to specify the bean to be used while injecting dependency.

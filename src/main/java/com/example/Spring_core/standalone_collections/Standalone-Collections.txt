@@ -1,0 +1,9 @@
+# Spring Standalone Collections:-
+	-when a collection is defined inside a bean declaration, it's scope is restricted to the bean
+	 of it's declaration.
+	 
+	-But, by using standalone collections same collection can be reused for injecting in multiple beans.
+	 It's scope is not limited to a single bean.
+	
+	-To make standalone collection util schema must be added to XML configuration.
+	

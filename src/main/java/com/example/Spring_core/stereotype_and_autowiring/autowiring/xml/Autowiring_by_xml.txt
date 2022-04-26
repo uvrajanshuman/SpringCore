@@ -1,0 +1,22 @@
+# Autowiring using xml:-
+	
+	<bean class="com.example.Spring_core.stereotype_and_autowiring.autowiring.xml.Employee" 
+  	 name="emp1" autowire="byType">
+  	</bean>
+  	
+  	autowire="byName" : The name of dependency bean must be same as the name of dependency 
+  						feild in the dependent class.
+  	
+  	autowire="byType" : The type is checked, if a bean of dependency type exists in config
+  						file, the autowiring happens.
+  	
+ 	autowire="constructor" : autowires using constructor. 
+ 							 checks for the name of the bean matching to the name of the
+ 							 dependency.
+ 							 
+# byName and byType uses setter injection.
+
+# If two or more bean of matching type exists in config file, then it causes ambiguity and
+  and throws exception.
+  
+  

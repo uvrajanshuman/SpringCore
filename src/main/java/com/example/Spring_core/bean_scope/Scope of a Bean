@@ -1,0 +1,37 @@
+# Scope of a Bean:-
+	Singleton: one instance per Spring context.
+	Prototype: new bean instance whenever requested.
+	Request: one bean per HTTP request.
+	Session: one bean per HTTP session
+	
+	Default Scope: Singleton.
+	
+# Singleton scope:
+	There will be single instance of bean per spring context and for each request that
+	same bean will be provided.
+
+# Prototype scope:
+	For each request of bean a new instance of it is provided.
+	
+# To specify scope the bean class can be annotated as:
+	@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE) or @Scope("prototype")
+	
+
+## Complex Scope scenario:-
+	a) Bean and it's dependency are of Singleton scope:
+		In this case same instance of bean and the same instance of dependency will be 
+		provided each time it is required.
+	
+	b) Bean is of scope Prototype but dependency of scope Singleton:
+		In this case for each request a new instance of bean will be given but the 
+		dependency of these new instances of beans will always remain the same instance 
+		of the dependency class
+		
+	c) Bean is of scope Singleton but dependency of scope Prototype:
+		In this case, even though dependency has Prototype scope still for each
+		requirement the same instance of bean as well as same instance of it's dependency
+		will be provided.
+		
+# If we really want a new instance of dependency each time the main bean is requested then
+  proxy needs to be configured.
+  Proxy will make sure we get new instance of dependency each time requested.

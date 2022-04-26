@@ -1,0 +1,41 @@
+# Ambiguity in @Autowired annotation:-
+
+# If the dependency can be resolved by more than one class/bean then putting @Component on more
+  than one classes (dependencies) causes ambiguity and thus is not allowed and causes error.
+  
+# Ex: Let BinarySearch class dependency SortAlgorithm can be resolved by let two classes
+	BubbleSort and HeapSort
+ If any one of these class is annotated with @Component the autowiring happens without any hassle.
+ So, if two or more bean exist for a single dependency it causes error.
+ 
+
+# The ambiguity can be resolved in 3 ways:
+
+	a) using @Primary annotation: if two beans exist one can be marked as @Primiary and it would be 
+	   preffered while injecting the dependency.
+       So, if you have more than one component matching a specific type @Primary can be used to specify
+       precedence or default one.
+    
+    b) using @Qualifier annotation: @Qualifier annotation is used to allocate names to beans while 
+       defining bean. And used to specify the bean to be used while injecting dependency.
+    
+    c) Autowiring by name: The name of bean can also be used for autowiring to specify the specific bean 
+       when multiple beans are availaible.
+	
+	Ex:-
+		BubbleSort (class name) ---> bubbleSort (bean name)
+		so,
+
+		@Autowired
+		SortAlgorithm bubbleSort; --> BubbleSort injected
+		
+# If there is one clear favourite then @Primary should be used 
+	else Autowiring by name or @Qualifier should be used.
+		
+# Note:
+	If @Primary and Autowiring by name both are used at same time.
+	Say for ex., @Primary is user over HeapSort and Autowiring by name is done for BubbleSort
+	In such cases, @Primary is more preferred and injected.
+	
+	@Primary has higher priority over name of the variable.
+  

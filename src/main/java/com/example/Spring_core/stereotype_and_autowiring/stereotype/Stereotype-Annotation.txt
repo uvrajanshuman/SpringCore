@@ -1,0 +1,35 @@
+# Stereotype Annotations:-
+	Till now we were declaring beans in xml configuration file as:
+	 <beans ...........
+	 ...............>
+	 	<bean><bean>
+	 </beans> 
+	 
+	 The equivalent of this can also be done using annotations.
+	 
+# XML: <bean>     Annotation: @Component
+
+# @Component annotation is used to define a bean.
+  Spring IOC container will manage these beans.
+  
+# But, for allowing Spring Framework to scan specific packages to get @Component
+  annotated classes and manage them; the component scan needs to be specified.
+  
+# The packages and sub-packages specified in component scan will be scanned to get beans.
+
+# Component scan can also be specified in two ways:
+  a) using Annotation 
+  b) using xml config file
+  
+# Note:-
+	The default name of @Component annotated class is the class name in camel case
+	Ex:-
+		Student (class) --> student (bean)
+	
+	To change the default bean name:
+	@Component("ob")
+	public class Student{
+		..........
+	}
+	//driver class
+	context.getBean("ob", Student.class);

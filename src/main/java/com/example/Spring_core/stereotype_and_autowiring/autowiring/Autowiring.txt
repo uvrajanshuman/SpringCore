@@ -1,0 +1,15 @@
+# Autowiring:-
+	-Feature of Spring Framework in which Spring Container injects the dependencies automatically.
+	
+	-Autowiring can't be used to inject primitive and String values.
+	-It works with reference type only.
+	
+# Autowiring can be done in two ways:-
+	a) XML
+	b) Annotation
+
+# Autowiring modes:-
+	no
+	byName
+	byType
+	constructor

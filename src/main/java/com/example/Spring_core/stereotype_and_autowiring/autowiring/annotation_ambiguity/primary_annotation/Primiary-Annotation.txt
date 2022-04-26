@@ -1,0 +1,4 @@
+# @Primary Annotation:-
+	Both BubbleSort and HeapSort both are annotated with @Component.
+	This causes ambiguity, which bean to inject.
+	So @Primary can be used to specify the preffered one.

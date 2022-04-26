@@ -1,0 +1,16 @@
+# Case of Ambiguity:- 
+	Multiple constructors with same no. but different type of arguments,
+	may lead to ambiguity of which constructor to be used for dependency injection.
+	
+# <constructor-arg value="20"/>
+# The default data type of 'type' attribute in constructor-arg is String.
+
+# <constructor-arg value="20" type="int"/>
+# In case of ambiguity (muliple constructor with same no. but different types of arguments present)
+  the type needs to be defined explicitly if it is not String.
+# By default values are treated to be String.
+
+
+# <constructor-arg value="20" type="int" index="1"/>
+# The 'index' attribute can also be used to specify index of passed constructor arg.
+	

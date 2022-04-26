@@ -1,0 +1,11 @@
+# Java Configuration File:-
+	Completely removing xml configuration file.
+	
+# @Configuration: To mark a Java class as Configuration class.
+	Instead of XML configuration Java configuration to be used.
+	Thus, AnnotatinConfigApplicationContext implementation of Application context will be used.
+
+# @ComponentScan: Tells spring to scan current package and sub-package to get beans.
+	The scanned package and sub-package would be the package the class is present in.
+
+# @ComponentScan(basePackage= "{packages}"): Tells spring to scan the specified packages to get beans.

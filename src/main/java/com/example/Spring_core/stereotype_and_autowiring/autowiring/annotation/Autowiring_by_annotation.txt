@@ -1,0 +1,19 @@
+# Autowiring by Annotation:-
+	
+	@Component --> bean (specifies spring that it needs to manage the instance of these classes).
+	
+	@Autowired --> dependency (specifies dependencies; Spring would look for this dependency
+					among the bean it manages and would inject it).
+	
+# @Autowired can be used on property, setter methods and the constructor.
+	when used on property or setter method --> setter injection.
+	when used on constructor --> constructor injection.
+				   
+# If the dependency can be resolved by more than one class/bean then putting @Component on more
+  than one classes (dependencies) causes ambiguity and thus is not allowed.
+  
+# Ex: Let BinarySearch class dependency SortAlgorithm can be resolved by let two classes
+	BubbleSort and HeapSort
+ If any one of these class is annotated with @Component the autowiring happens without any hassle.
+ So, if two or more bean exist for a single dependency it causes error.
+ 
